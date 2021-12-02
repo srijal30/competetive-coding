@@ -2,6 +2,8 @@ import fileinput
 
 count = 0
 values = []
+
+
 for line in fileinput.input(files = "day1test.txt" ):
     values.append( int(line) )
 
