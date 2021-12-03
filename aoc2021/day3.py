@@ -33,7 +33,7 @@ indexTracker = 0
 while len(values2) > 1:
     
     keepSafe = findMin( values2, indexTracker )
-    values2 = [ values1[x] for x in range(len(values1)) if values1[x][indexTracker] == keepSafe]
+    values2 = [ values1[x] for x in range(len(values2)) if values1[x][indexTracker] == keepSafe]
     indexTracker += 1        
 
 
