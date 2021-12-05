@@ -8,14 +8,14 @@ for line in fileinput.input("day3test.txt" ):
 
 def findMin( arr , bit):
     column = [ arr[x][bit] for x in range(arr) ]
-    if column.count("1") > column.count("0")
+    if column.count("1") > column.count("0"):
         return "1"
     return "0"
     
 
 def findMax( arr , bit):
     column = [ arr[x][bit] for x in range(arr) ]
-    if column.count("0") > column.count("1")
+    if column.count("0") > column.count("1"):
         return "0"
     return "1"
 
