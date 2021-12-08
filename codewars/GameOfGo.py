@@ -67,6 +67,9 @@ class Go:
             #change turn
             self.turn = "black" if self.turn == "white" else "white"
 
+    def handicap(self, stonesCount ):
+        
+
 
 
 
