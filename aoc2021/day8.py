@@ -16,7 +16,7 @@ def findNum( scramble ):
         
         if seq in references:
             continue
-        
+                
         elif length == 2:
             references[1] = seq
 
