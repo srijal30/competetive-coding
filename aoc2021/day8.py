@@ -7,14 +7,13 @@ outputs = [ ["".join(sorted(y)) for y in x.split(" | ")[1].split(" ")] for x in 
 
 #find out each num
 def findNum( scramble ):
-
     references = [ "" for x in range( 10 ) ]
-
-    for seq in scramble:
-        
-        length = len(seq)
-        
-        if seq in references:
+    
+    counts = [len(x) for x in scramble]
+	print(counts)  
+	
+	for seq in scramble:
+    	if seq in references:
             continue
                 
         elif length == 2:
@@ -60,6 +59,4 @@ adding = 0
 for output in outputs:
     sum += findNum( output )
 
-
-print( adding )
-
+#print(adding)
