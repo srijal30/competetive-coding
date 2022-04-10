@@ -67,7 +67,7 @@ class Go:
             #change turn
             self.turn = "black" if self.turn == "white" else "white"
 
-    def handicap(self, stonesCount ):
+    #def handicap(self, stonesCount ):
         
 
 
@@ -81,7 +81,7 @@ class Go:
 #badBoard = Go(26)
 
 #constructor with 2 arg test
-testBoard = Go(5, 4)
+#testBoard = Go(5, 4)
 #print(testBoard.board)
 #print( testBoard.size )
 #badBoard = Go(12, 26)
@@ -117,4 +117,3 @@ testBoard = Go(5, 4)
 #print( testBoard.get_position("1D") )
 
 #handicap test
-
