@@ -1,0 +1,60 @@
+/*
+A K-Pop producer Ishaan is extremely angry with his lazy backstage dancers while filming the next BlackRed music video! 
+To punish them, he gives them each a letter to hold (which come together to form a string) and then yells out a series of positive integers. 
+For each integer, the dancers must shift right by that amount, but must “wrap” around the right end so that their position in line has changed. 
+(ex.With each call, some rightmost dancers will have moved to the leftmost side.) Can you write a program that determines the final string after he finally loses his voice?
+
+Implementation Details
+
+Implement the following function. It will be called by the grader once for each test case.
+
+danceCommand(s, arr)
+
+s: a string that represents the initial string
+arr: an array of positive integers that represent the “right shifts” of the string
+Your function should return a string.
+
+Input Format
+The first line represents the number of test cases T. For each test case:
+
+The first line contains s.
+The second line contains n, the length of the array.
+The third line contains arr which consists of n integer values, each denoted as x.
+Output Format
+For each test case, print a string representing the shifted string.
+
+Constraints
+1≤|string|≤10000
+1≤|arr|≤10000
+0≤x≤100000 where x is an element of arr.
+Sample Input 1 
+1
+kpop
+1
+2
+Sample Output 1 
+opkp
+Explanation
+The first two letters are shifted by 2 right, and the last two rightmost letters are wrapped to the left.
+
+Sample Input 2 
+1
+blackred
+1
+3
+Sample Output 2 
+redblack
+Explanation
+The first 5 letters are shifted by 3 right, and the 3 rightmost letters are wrapped to the left.
+
+Sample Input 3 
+1
+capital
+4
+1 3 7 1
+
+Sample Output 3 
+pitalca
+Explanation
+After each of the 4 shifts, the string should be: lcapita italcap italcap pitalca
+*/
