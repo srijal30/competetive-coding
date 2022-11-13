@@ -6,6 +6,7 @@ def update_tile( distance, tile ):
 
 new_matrix = [ [] for x in range(500) ]
 print( len(new_matrix) )
+
 #make matrix good
 for row_index in range( len(new_matrix) ):
     old_row = matrix[ row_index % 100 ]
