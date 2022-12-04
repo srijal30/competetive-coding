@@ -6,10 +6,7 @@ lines = content.splitlines()
 lower = "abcdefghijklmnopqrstuvwxyz"
 
 total = 0
-
-
 for index in range(0, len(lines), 3):
-    print(index)
     one = lines[index]
     two = lines[index+1]
     three = lines[index+2]

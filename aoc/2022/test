@@ -5,5 +5,4 @@ if [ -z "$1" ]
     exit
 fi
 
-
-python $1.py
+python $1.py $2

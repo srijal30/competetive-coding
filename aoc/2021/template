@@ -1,0 +1,8 @@
+#! /usr/bin/bash
+
+touch day$1test.txt
+rm -f day$1.py
+echo "content = open('day$1test.txt', 'r').read()" >> day$1.py
+echo "lines = content.splitlines()" >> day$1.py
+code day$1test.txt
+code day$1.py
