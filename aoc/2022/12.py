@@ -53,4 +53,3 @@ def best_path(startX, startY):
 
 possibles = [best_path(*x) for x in possibles]
 print(min(possibles))
-
