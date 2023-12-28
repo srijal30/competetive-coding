@@ -1,9 +1,6 @@
 import re
 
-testerfile = open('2', 'r')
-content = testerfile.read()
-testerfile.close()
-lines = content.splitlines()
+lines = open(0).read().splitlines()
 
 colors = ["red", "green", "blue"]
 highest = [12, 13, 14]
