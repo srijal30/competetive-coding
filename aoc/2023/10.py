@@ -1,14 +1,29 @@
-grid = [[x for x in l] for l in open(0).read().splitlines()]
-start = (0, 0)
+grid = [l for l in open(0).read().splitlines()]
+n = len(grid)
 
 for i in range(len(grid)):
     for j in range(len(grid[i])):
         if grid[i][j] == "S":
-            start = (i, j)
+            start = (i,j)
+            break
+        else:
+            continue
+        break
 
-moves = {(-1,0):"S|LJ", (1,0):"S|7F", (0,-1):"S-J7", (0,1):"S-LF"}
-pipes = "|-LJ7FS"
-visited = {start:0}
+moves = {(-1,0):"|LJ", (1,0):"|7F", (0,-1):"-J7", (0,1):"-LF"}
+pipes = set("|-LJ7F")
+for m in moves:
+    nx = start[0] + m[0]
+    ny = start[1] + m[1]
+    if nx not in range(n) or ny not in range(n):
+        continue
+    if grid[nx][ny] in moves[(m[0]*-1, m[1]*-1)]:
+        pipes &= set(moves[m])
+
+assert len(pipes) == 1
+grid[start[0]] = grid[start[0]].replace("S", pipes.pop())
+    
+visited = set()
 queue = [start]
 while len(queue) != 0:
     cur = queue.pop(0)
@@ -18,9 +33,9 @@ while len(queue) != 0:
         ny = y + m[1]
         if nx not in range(len(grid)) or ny not in range(len(grid[0])):
                 continue
-        if grid[x][y] in moves[m] and grid[nx][ny] in pipes and (nx, ny) not in visited:
+        if grid[x][y] in moves[m] and (nx, ny) not in visited:
             queue.append((nx, ny))
-            visited[(nx,ny)] = visited[(x,y)] + 1
+            visited.add((nx,ny))
 
 print(len(visited)//2)
 
