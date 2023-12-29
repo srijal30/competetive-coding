@@ -36,7 +36,6 @@ while len(queue) != 0:
         if grid[x][y] in moves[m] and (nx, ny) not in visited:
             queue.append((nx, ny))
             visited.add((nx,ny))
-
 print(len(visited)//2)
 
 ans2 = 0
@@ -64,7 +63,6 @@ for i in range(len(grid)):
         elif (i,j) not in visited:
             if cnt % 2 == 1:
                 ans2 += 1
-
 print(ans2)
 
 

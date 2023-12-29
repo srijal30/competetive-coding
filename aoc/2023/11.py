@@ -23,5 +23,3 @@ for gal1 in galaxies:
 
 print(ans1//2)
 
-
-
