@@ -1,9 +1,0 @@
-#! /usr/bin/bash
-
-# if empty then exit
-if [ -z "$1" ]
-	then
-		exit
-fi
-
-cat $1 | python $1.py
